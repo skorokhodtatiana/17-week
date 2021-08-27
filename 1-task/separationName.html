@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label> Введите свое ФИО
+            <input type="text" id="user" name="user" />
+        </label>
+        <label>Фамилия
+            <input type="text" id="surname" name="surname" />
+        </label>
+        <label>Имя
+            <input type="text" id="nameUser" name="nameUser" />
+        </label>
+        <label>Отчество
+            <input type="text" id="patronymic" name="patronymic" />
+        </label>
+        <!-- <button type="button">Сортировка</button> -->
+    </form>
+
+    <script>
+        let surname = document.getElementById('surname');
+        let userName = document.getElementById('nameUser');
+        let patronymic = document.getElementById('patronymic');
+
+        let user = document.getElementById('user');
+        user.addEventListener('input', function (event) {
+            let valueUser = event.target.value;
+            let arrUser = valueUser.split(" ");
+
+            let valueSurname = surname.value = arrUser[0];
+            let valueSurnameRight = valueSurname[0].toUpperCase() + valueSurname.slice(1).toLowerCase();
+            surname.value = valueSurnameRight;
+
+            let valueName = nameUser.value = arrUser[1];
+            let valueNameRight = valueName[0].toUpperCase() + valueName.slice(1).toLowerCase();
+            nameUser.value = valueNameRight;
+
+            let valuePatronymic = patronymic.value = arrUser[2];
+            let valuePatronymicRight = valuePatronymic[0].toUpperCase() + valuePatronymic.slice(1).toLowerCase();
+            patronymic.value = valuePatronymicRight;
+        })
+
+        // function cancel(event){
+        //     event.preventDefault();
+        // }
+    </script>
+</body>
+
+</html>
