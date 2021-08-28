@@ -14,13 +14,13 @@ function getComments() {
 }
 
 function checkSpam(com) {
-    let correctComment = com.replace(/viagra/g, '***').replace(/xxx/i, '***');
+    let correctComment = com.replace(/viagra/ig, '***').replace(/xxx/ig, '***');
     return correctComment;
 }
 
 function setComments(comment){
     let divComment = document.getElementById('showComments');
-    divComment.innerHTML += `<br/> ${comment}`;
+     divComment.innerHTML += `<br/> ${comment}`;
  }
 
 
