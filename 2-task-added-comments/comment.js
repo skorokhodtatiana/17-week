@@ -4,7 +4,8 @@ let submitComment = document.getElementById('submitComment');
 function processingComments() {
     let userComment = getComments();
     let resultCorrectComment = checkSpam(userComment);
-    setComments(resultCorrectComment);
+    let setShowComments = setComments(resultCorrectComment);
+    cleanInput(setShowComments);
 }
 
 function getComments() {
@@ -20,6 +21,10 @@ function checkSpam(com) {
 function setComments(comment){
     let divComment = document.getElementById('showComments');
      divComment.innerHTML += `<br/> ${comment}`;
+ }
+
+ function cleanInput(){
+     comment.value = "";
  }
 
 submitComment.addEventListener('click', processingComments);
