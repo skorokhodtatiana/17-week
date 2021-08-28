@@ -1,5 +1,4 @@
 let comment = document.getElementById('textArea');
-
 let submitComment = document.getElementById('submitComment');
 
 function processingComments() {
@@ -22,7 +21,5 @@ function setComments(comment){
     let divComment = document.getElementById('showComments');
      divComment.innerHTML += `<br/> ${comment}`;
  }
-
-
 
 submitComment.addEventListener('click', processingComments);
