@@ -29,18 +29,3 @@ if(userDate.getDate() < 10){
 }
 
 formatDate("2020-02-01 21:25:00");
-
-// switch (key) {
-//     case value:
-
-//         break;
-
-//     default:
-//         break;
-// }
-
-switch(difference){
-    case < 1* 60: 
-    alert("Прямо сейчас");
-    break;
-}
