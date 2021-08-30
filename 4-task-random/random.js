@@ -13,7 +13,7 @@ function startScript() {
 
 function createRandomNumber() {
     let listRandomNumber = [];
-    for (i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
         let randomNumber = Math.ceil(Math.random() * 10) * (Math.round(Math.random()) ? 1 : -1);
         let arrListRandomNumber = listRandomNumber.push(randomNumber);
     }
